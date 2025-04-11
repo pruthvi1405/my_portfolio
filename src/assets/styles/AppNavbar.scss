@@ -1,0 +1,167 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.navbar {
+  background-color: #0d0714;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #9c27b0, #7b1fa2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease; // 🔥 smooth transition for color/background
+
+    &.active {
+      color: #9c27b0;
+      font-weight: 600;
+      background-color: rgba(156, 39, 176, 0.1); // optional soft highlight
+      padding: 0.25rem 0.5rem;
+      border-radius: 8px;
+      transform: scale(1.05);
+    }
+
+    &:hover {
+      color: #9c27b0;
+    }
+  }
+}
+
+
+.scroll-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(to right, #9c27b0, #7b1fa2);
+  transition: width 0.2s ease-out;
+  width: 0%;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+
+    a {
+      font-size: 1rem;
+      width: 100%;
+      padding: 0.5rem 0;
+    }
+  }
+
+  .scroll-progress {
+    bottom: 0;
+    height: 3px;
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 10000;
+
+  span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  span.open:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  span.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  span.open:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+    position: relative;
+
+    .hamburger {
+      display: flex;
+      position: absolute;
+      right: 1.5rem;
+      top: 1.2rem;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      gap: 0.8rem;
+      width: 100%;
+      display: none;
+      margin-top: 3.5rem;
+
+      &.open {
+        display: flex;
+        animation: fadeIn 0.3s ease;
+      }
+
+      a {
+        font-size: 1rem;
+        width: 100%;
+        padding: 0.5rem 0;
+      }
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

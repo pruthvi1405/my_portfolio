@@ -1,0 +1,250 @@
+.page-overlay {
+  position: absolute;
+  z-index: 999;
+  background-color: #0d061a;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: revealPage 1.2s ease-in-out forwards;
+  pointer-events: none;
+}
+
+@keyframes revealPage {
+  0% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+}
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0d061a;
+  color: white;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stars-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.08;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8vh 8vw;
+  flex: 1;
+}
+
+.text-content {
+  max-width: 600px;
+  text-align: left;
+
+  .profile-img {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #a855f7;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin: 0;
+
+    .highlight {
+      color: #a855f7;
+      font-weight: 900;
+    }
+
+    .dimmed {
+      color: #d4d4d8;
+      font-weight: 800;
+    }
+  }
+
+  p {
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+  }
+
+  .social-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.2rem;
+  
+    .icon-btn {
+      background-color: #a855f7;
+      color: white;
+      padding: 0.5rem;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+  
+      &:hover {
+        background-color: #9333ea;
+        transform: scale(1.15) rotate(5deg);
+      }
+    
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+  
+}
+
+.hero-stats {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.5rem;
+  z-index: 2;
+
+  .stat {
+    text-align: right;
+    transition: transform 0.3s ease, color 0.3s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    span {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #a855f7;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #d4d4d8;
+    }
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.profile-img {
+  animation: float 4s ease-in-out infinite;
+}
+.scroll-down {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  .v-symbol {
+    font-size: 3rem;              // Bigger overall
+    font-weight: 900;             // Bolder
+    letter-spacing: 0.4rem;       // Wider spacing
+    transform: scaleX(1.5);       // Stretch horizontally
+    color: #a855f7;
+    opacity: 0.8;
+    animation: vDrop 1.8s infinite ease-in-out;
+    transition: transform 0.3s ease;
+  }
+  
+}
+
+@keyframes vDrop {
+  0% {
+    transform: translateY(-10px) scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(5px) scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px) scale(1);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4vh 1.5rem;
+    gap: 2rem;
+  }
+
+  .text-content {
+    max-width: 100%;
+    text-align: left;
+
+    .profile-img {
+      width: 12rem;
+      height: 12rem;
+      margin: 0 auto 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .social-buttons {
+      justify-content: flex-start;
+
+      .icon-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+
+        svg {
+          width: 1.2rem;
+          height: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .hero-stats,
+  .scroll-down {
+    display: none;
+  }
+}

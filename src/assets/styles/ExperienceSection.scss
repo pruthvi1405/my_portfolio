@@ -1,0 +1,321 @@
+body.scroll-locked {
+  overflow: hidden;
+}
+.experience-section {
+    background-color: #000;
+    color: #e0d8f5;
+    padding: 4rem 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+  
+    .experience-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  
+    .section-title {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 3rem;
+      color: #a85ff5;
+      text-shadow: 0 0 20px #7e3ff2, 0 0 40px #7e3ff2;
+      animation: slideFade 1s ease forwards;
+    }
+  
+    .timeline-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      align-items: flex-start;
+      animation: fadeInUp 1.2s ease forwards;
+      flex-wrap: wrap;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .company-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0;
+      list-style: none;
+      min-width: 220px;
+  
+      div {
+        padding: 0.6rem 1.2rem;
+        cursor: pointer;
+        color: #a85ff5;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        background: none;
+        border: none;
+        font-size: 1.1rem;
+        position: relative;
+        border-left: 3px solid transparent;
+  
+        &.active {
+          color: #fff;
+          font-weight: 700;
+          text-shadow: 0 0 15px #d1aaff;
+          border-left: 3px solid #d1aaff;
+        }
+  
+        &:hover {
+          color: #fff;
+          text-shadow: 0 0 10px #d1aaff;
+        }
+      }
+    }
+  
+    .experience-details {
+      flex: 1;
+      text-align: left;
+      animation: fadeInUp 1s ease forwards;
+      max-width: 700px;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  
+      .role-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #fff;
+        text-shadow: 0 0 10px #7e57c2;
+  
+        span {
+          color: #c49cff;
+          font-weight: 400;
+        }
+      }
+  
+      .period {
+        font-weight: 600;
+        color: #bbb;
+        margin-bottom: 1.2rem;
+      }
+  
+      .description {
+        line-height: 1.6;
+        color: #c084fc;
+        font-size: 1rem;
+        animation: fadeInUp 1.4s ease forwards;
+      }
+    }
+  
+    .purple-glow {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(to bottom, rgba(168, 95, 245, 0.3), transparent);
+      filter: blur(50px);
+      z-index: 0;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideFade {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .experience-section {
+      padding: 2rem 1rem;
+      height: 100vh;
+      background-color: #0a0014;
+  
+      .experience-container {
+        width: 100%;
+        height: auto;
+      }
+  
+      .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        color: #ff9ef5;
+      }
+  
+      .timeline-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+  
+      .company-list {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 0.8rem;
+        justify-content: flex-start;
+        width: 100%;
+        padding-bottom: 0.5rem;
+        scrollbar-width: none;
+  
+        div {
+          padding: 0.4rem 1rem;
+          font-size: 0.85rem;
+          font-weight: 600;
+          background: rgba(255, 255, 255, 0.08);
+          border-radius: 1rem;
+          color: #d1aaff;
+          white-space: nowrap;
+          transition: 0.3s ease;
+          flex-shrink: 0;
+  
+          &.active {
+            background: #d1aaff;
+            color: #0a0014;
+          }
+        }
+      }
+  
+      .experience-details {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  
+        .role-title {
+          font-size: 1.3rem;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+          text-align: center;
+          color: #ffffff;
+  
+          span {
+            color: #d1aaff;
+            font-weight: 500;
+          }
+        }
+  
+        .period {
+          text-align: center;
+          font-size: 0.9rem;
+          margin-bottom: 1rem;
+          color: #aaa;
+        }
+  
+        .description {
+          font-size: 0.95rem;
+          color: #e3d6ff;
+          line-height: 1.6;
+          padding-top: 0.5rem;
+  
+          p {
+            margin-bottom: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 425px) {
+    .experience-section {
+      padding: 1.5rem 1rem;
+      overflow-x: hidden;
+  
+      .experience-container {
+        width: 100%;
+      }
+  
+      .timeline-wrapper {
+        width: 100%;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+      }
+  
+      .company-list {
+        gap: 0.5rem;
+        padding-bottom: 0.8rem;
+  
+        div {
+          padding: 0.35rem 0.8rem;
+          font-size: 0.78rem;
+          border-radius: 999px;
+          font-weight: 500;
+  
+          &.active {
+            font-weight: 700;
+          }
+        }
+      }
+  
+      .experience-details {
+        padding: 1rem 1.2rem;
+        border-radius: 1rem;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+  
+        .role-title {
+          font-size: 1.15rem;
+          text-align: center;
+  
+          span {
+            display: block;
+            font-size: 0.95rem;
+            margin-top: 0.2rem;
+          }
+        }
+  
+        .period {
+          font-size: 0.85rem;
+          margin: 0.4rem 0 0.8rem;
+          text-align: center;
+        }
+  
+        .description {
+          font-size: 0.9rem;
+          line-height: 1.6;
+  
+          p {
+            margin-bottom: 0.6rem;
+          }
+        }
+      }
+    }
+  }
+  
