@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -47,6 +48,7 @@
     "not dead",
     "not ie 11"
   ],
-  "homepage": "https://pruthvi1405.github.io/my_portfolio"
+  "homepage": "https://pruthvi1405.github.io/my_portfolio/"
+
 
 }
