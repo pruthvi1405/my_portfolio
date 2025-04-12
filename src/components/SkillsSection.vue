@@ -5,7 +5,7 @@
       <!-- LEFT SIDE: heading and subtext -->
       <div class="left-block">
         <!-- Tag/label above heading -->
-        <div class="tag">ABOUT ME</div>
+        <div class="tag">MY SKILLS</div>
 
         <h2 class="section-title">
           Blending Creativity with 
@@ -55,6 +55,31 @@
 </template>
 
 <script setup>
+import kubernetesLogo from '@/assets/images/kubernetes.png'
+import awsLogo from '@/assets/images/aws.png'
+import jenkinsLogo from '@/assets/images/jenkins.png'
+import mongoLogo from '@/assets/images/mongodb.svg'
+import postgresLogo from '@/assets/images/postgres.png'
+import redisLogo from '@/assets/images/redis.png'
+import gitLogo from '@/assets/images/git.png'
+import logstashLogo from '@/assets/images/logstash.svg'
+import elasticsearchLogo from '@/assets/images/elasticsearch.png'
+import kafkaLogo from '@/assets/images/kafka.png'
+import linuxLogo from '@/assets/images/linux.png'
+import graphqlLogo from '@/assets/images/graphql.png'
+import restLogo from '@/assets/images/rest.webp'
+import reactlogo from '@/assets/images/react.png'
+import angularlogo from '@/assets/images/angular.png'
+import nodelogo from '@/assets/images/node.png'
+import netlogo from '@/assets/images/net.png'
+import springlogo from '@/assets/images/springboot.png'
+import flasklogo from '@/assets/images/flask.png'
+import bashlogo from '@/assets/images/bash.png'
+import javalogo from '@/assets/images/java.png'
+import pythonlogo from '@/assets/images/python.png'
+import clogo from '@/assets/images/c++.png'
+import sqllogo from '@/assets/images/sql.jpeg'
+import jslogo from '@/assets/images/js.png'
 /**
  * Same data as before. Each skill has:
  *   title, logo, description
@@ -64,108 +89,108 @@
   // Programming Languages
   {
     title: 'Python',
-    logo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.citypng.com%2Fphoto%2F20680%2Fhd-python-logo-symbol-transparent-png&psig=AOvVaw2U6BWe-Z4Dpk0ZVMxv3iM9&ust=1744381908207000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKikt5TXzYwDFQAAAAAdAAAAABAE',
+    logo: pythonlogo,
     description: 'Used for automation, scripting, Flask APIs, and machine learning.',
   },
   {
     title: 'Java',
-    logo: 'https://cdn-icons-png.flaticon.com/512/226/226777.png',
+    logo: javalogo,
     description: 'Developed enterprise applications and Spring Boot backends.',
   },
   {
     title: 'SQL',
-    logo: 'https://cdn-icons-png.flaticon.com/512/4492/4492311.png',
+    logo: sqllogo,
     description: 'Used across PostgreSQL, MySQL, and OracleDB for structured data handling.',
   },
   {
     title: 'C++',
-    logo: 'https://cdn-icons-png.flaticon.com/512/6132/6132222.png',
+    logo: clogo,
     description: 'Strong foundational language for algorithms and systems programming.',
   },
   {
     title: 'JavaScript',
-    logo: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png',
+    logo: jslogo,
     description: 'Used for dynamic UIs in React and Angular applications.',
   },
 
   // Frameworks & Libraries
   {
     title: 'React',
-    logo: 'https://cdn-icons-png.flaticon.com/512/1126/1126012.png',
+    logo: reactlogo,
     description: 'Built responsive frontend UIs and reusable components.',
   },
   {
     title: 'Angular',
-    logo: 'https://cdn-icons-png.flaticon.com/512/732/732212.png',
+    logo: angularlogo,
     description: 'Worked on frontend architecture and forms.',
   },
   {
     title: 'Node.js',
-    logo: 'https://cdn-icons-png.flaticon.com/512/919/919825.png',
+    logo: nodelogo,
     description: 'Developed backend logic and APIs in full-stack apps.',
   },
   {
     title: '.NET',
-    logo: 'https://cdn-icons-png.flaticon.com/512/6132/6132221.png',
+    logo: netlogo,
     description: 'Worked with Microsoft development stack for enterprise apps.',
   },
   {
     title: 'Spring Boot',
-    logo: 'https://cdn-icons-png.flaticon.com/512/5968/5968342.png',
+    logo: springlogo,
     description: 'Created RESTful services and integrated databases.',
   },
   {
     title: 'Flask',
-    logo: 'https://cdn-icons-png.flaticon.com/512/5968/5968381.png',
+    logo: flasklogo,
     description: 'Developed lightweight Python backends and APIs.',
   },
   {
     title: 'Bash',
-    logo: 'https://cdn-icons-png.flaticon.com/512/919/919837.png',
+    logo: bashlogo,
     description: 'Automated tasks and managed Linux-based systems.',
   },
 
   // Systems & APIs
   {
     title: 'RESTful APIs',
-    logo: 'https://cdn-icons-png.flaticon.com/512/3909/3909444.png',
+    logo: restLogo,
     description: 'Designed and consumed stateless web services.',
   },
   {
     title: 'GraphQL',
-    logo: 'https://cdn-icons-png.flaticon.com/512/5968/5968773.png',
+    logo: graphqlLogo,
     description: 'Used for flexible and efficient data queries.',
   },
   {
     title: 'Linux',
-    logo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2F1000logos.net%2Flinux-logo%2F&psig=AOvVaw2atLqWZkgTs7j6YmzmeARz&ust=1744381973011000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCOjpsbHXzYwDFQAAAAAdAAAAABAE',
+    logo: linuxLogo,
     description: 'Preferred development OS for backend and scripting tasks.',
   },
   {
     title: 'Kafka',
-    logo: 'https://cdn-icons-png.flaticon.com/512/919/919831.png',
+    logo: kafkaLogo,
     description: 'Worked with distributed streaming for real-time pipelines.',
   },
   {
     title: 'ElasticSearch',
-    logo: 'https://cdn-icons-png.flaticon.com/512/1051/1051275.png',
+    logo: elasticsearchLogo,
     description: 'Implemented full-text search and data indexing.',
   },
   {
     title: 'LogStash',
-    logo: 'https://cdn-icons-png.flaticon.com/512/5969/5969044.png',
+    logo: logstashLogo,
     description: 'Processed logs and ingested data for analytics.',
   },
   {
     title: 'Git',
-    logo: 'https://cdn-icons-png.flaticon.com/512/2111/2111288.png',
+    logo: gitLogo,
     description: 'Version control and collaborative dev workflows.',
   },
 
   // Cloud & DevOps
   {
     title: 'AWS',
-    logo: 'https://cdn-icons-png.flaticon.com/512/919/919825.png',
+    logo: awsLogo,
     description: 'Deployed infrastructure and services like EC2, S3.',
   },
   {
@@ -175,29 +200,29 @@
   },
   {
     title: 'Kubernetes',
-    logo: 'https://cdn-icons-png.flaticon.com/512/5969/5969039.png',
+    logo: kubernetesLogo,
     description: 'Automated deployment and scaling of containers.',
   },
   {
     title: 'Jenkins',
-    logo: 'https://cdn-icons-png.flaticon.com/512/2772/2772189.png',
+    logo: jenkinsLogo,
     description: 'Implemented CI/CD pipelines for automation.',
   },
 
   // Databases
   {
     title: 'PostgreSQL',
-    logo: 'https://cdn-icons-png.flaticon.com/512/5968/5968349.png',
+    logo: postgresLogo,
     description: 'Relational DB used in backend and enterprise apps.',
   },
   {
     title: 'Redis',
-    logo: 'https://cdn-icons-png.flaticon.com/512/528/528144.png',
+    logo: redisLogo,
     description: 'In-memory store for caching and pub/sub systems.',
   },
   {
     title: 'MongoDB',
-    logo: 'https://cdn-icons-png.flaticon.com/512/919/919836.png',
+    logo: mongoLogo,
     description: 'NoSQL DB used in MERN stack and scalable apps.',
   }
 ];

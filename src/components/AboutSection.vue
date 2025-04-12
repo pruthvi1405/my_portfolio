@@ -15,7 +15,7 @@
         </h1>
 
         <p>
-          Hi! I'm <strong>Pruthvi</strong>. A creative Frontend Developer with 3+ years
+          Hi! I'm <strong>Pruthvi</strong>. A creative FullStack Developer with 1+ years
           of experience in building high-performance, scalable, and responsive web
           solutions.
         </p>
@@ -46,9 +46,10 @@
 
     <!-- Bottom-right vertical stats -->
     <div class="hero-stats">
-      <div class="stat"><span>3+</span><p>Years of Experience</p></div>
+      <div class="stat"><span>1+</span><p>Years of Experience</p></div>
       <div class="stat"><span>7+</span><p>Completed Projects</p></div>
-      <div class="stat"><span>10K+</span><p>Hours Worked</p></div>
+      <div class="stat"><span>2K+</span><p>Hours Worked</p></div>
+      <div class="stat"><span>200+</span><p>Leetcode problems Solved</p></div>
     </div>
   </div>
 </template>

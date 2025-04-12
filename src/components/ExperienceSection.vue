@@ -91,22 +91,8 @@ const handleClick = (index) => {
   }
 }
 
-let scrollCooldown = false
-const handleWheelScroll = (event) => {
-  if (scrollCooldown) return
-  if (event.deltaY > 0 && selectedIndex.value < experiences.length - 1) {
-    selectedIndex.value++
-  } else if (event.deltaY < 0 && selectedIndex.value > 0) {
-    selectedIndex.value--
-  }
-  scrollCooldown = true
-  setTimeout(() => {
-    scrollCooldown = false
-  }, 700)
-}
-
-const lockScroll = () => document.body.classList.add('scroll-locked')
-const unlockScroll = () => document.body.classList.remove('scroll-locked')
+const handleHover = () => cursor?.classList.add('hovering-company')
+const handleLeave = () => cursor?.classList.remove('hovering-company')
 
 let cursor = null
 const handleMouseMove = (e) => {
@@ -115,8 +101,6 @@ const handleMouseMove = (e) => {
     cursor.style.left = `${e.clientX}px`
   }
 }
-const handleHover = () => cursor?.classList.add('hovering-company')
-const handleLeave = () => cursor?.classList.remove('hovering-company')
 
 onMounted(() => {
   cursor = document.createElement('div')
@@ -124,19 +108,10 @@ onMounted(() => {
   document.body.appendChild(cursor)
 
   window.addEventListener('mousemove', handleMouseMove)
-
-  const detailEl = document.querySelector('.experience-details')
-  detailEl?.addEventListener('wheel', handleWheelScroll)
-  detailEl?.addEventListener('mouseenter', lockScroll)
-  detailEl?.addEventListener('mouseleave', unlockScroll)
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('mousemove', handleMouseMove)
-  const detailEl = document.querySelector('.experience-details')
-  detailEl?.removeEventListener('wheel', handleWheelScroll)
-  detailEl?.removeEventListener('mouseenter', lockScroll)
-  detailEl?.removeEventListener('mouseleave', unlockScroll)
   cursor?.remove()
 })
 </script>

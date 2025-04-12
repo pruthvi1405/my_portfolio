@@ -15,6 +15,7 @@
         
         <SkillsSection />
         <ContactSection />
+        <Footer/>
       </main>
     </div>
   </div>
@@ -34,6 +35,7 @@ import ExperienceSection from './components/ExperienceSection.vue'
 import ProjectsSection from './components/ProjectsSection.vue'
 import SkillsSection from './components/SkillsSection.vue'
 import ContactSection from './components/ContactSection.vue'
+import Footer from './components/Footer.vue'
 
 const showIntro = ref(true)
 const scrollContainer = ref(null)
