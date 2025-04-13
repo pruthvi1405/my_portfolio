@@ -171,82 +171,51 @@
   }
   
   @media (max-width: 425px) {
-    .two-columns-scroll {
-      padding: 5rem 1rem;
+    .scroll-strip {
+      width: 100%;
+      overflow: hidden;
+      padding: 1rem 0;
   
-      .layout-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 2.5rem;
-      }
-  
-      .left-block {
-        text-align: center;
-        align-items: center;
-  
-        .tag {
-          margin: 0 auto 1rem;
-          font-size: 0.8rem;
-        }
-  
-        .section-title {
-          font-size: 2rem;
-          margin-bottom: 1rem;
-  
-          span {
-            display: inline;
-          }
-        }
-  
-        .subtext {
-          font-size: 1rem;
-          line-height: 1.6;
-          max-width: 90vw;
-          margin: 0 auto;
-        }
-      }
-  
-      .right-block {
-        width: 100%;
-        justify-content: center;
+      .scroll-content {
         display: flex;
-      }
-  
-      .columns-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-      }
-  
-      .column {
-        width: 100%;
-        max-width: 360px;
-        height: auto;
-        overflow-y: visible;
-        padding: 1rem;
-      }
-  
-      .column-content {
-        flex-direction: column;
         gap: 1.5rem;
+        animation: scroll-horizontal 20s linear infinite;
+        align-items: center;
+  
+        &:hover {
+          animation-play-state: paused;
+        }
       }
   
-      .skill-card {
-        padding: 1.5rem 1rem;
+      .scroll-item {
+        flex: 0 0 auto;
+        transition: transform 0.3s ease;
   
-        h3 {
-          font-size: 1.1rem;
-        }
-  
-        .desc {
-          font-size: 0.9rem;
+        &:hover {
+          transform: scale(1.2);
         }
   
         img {
-          width: 60px;
-          height: 60px;
+          width: 56px;
+          height: 56px;
+          object-fit: contain;
+          border-radius: 12px;
+          background: rgba(255, 255, 255, 0.08);
+          padding: 6px;
         }
       }
     }
+  
+    @keyframes scroll-horizontal {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
   }
+  
+  
+  
   

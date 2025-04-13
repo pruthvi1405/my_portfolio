@@ -17,7 +17,7 @@
         </form>
 
         <div class="contact-footer">
-          <a class="resume-btn" href="/PruthviNiranjan_Resume.pdf" download>
+          <a class="resume-btn" href="/public/PruthviNiranjan_Resume.pdf" download>
             Download My Resume
           </a>
           <div class="social-links">

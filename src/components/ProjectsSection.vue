@@ -36,32 +36,37 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import chess from '@/assets/images/chess.jpg'
+import study from '@/assets/images/study.jpg'
+import easy from '@/assets/images/easy.jpg'
+import medical from '@/assets/images/medical.jpg'
 
 const projects = [
   {
-    name: 'Easy Connect',
-    description: 'Real-time MERN chat app with file sharing.',
-    github: 'https://github.com/pruthvi1405/easy-connect',
-    image: 'https://images.unsplash.com/photo-1551033406-611cf9a28f73?auto=format&fit=crop&w=1050&q=80'
-  },
+  name: 'Easy Connect',
+  description: 'Full-stack MERN application with real-time chat, video calling, and file sharing features.',
+  github: 'https://github.com/pruthvi1405/Easy-Connect',
+  image: easy
+},
   {
-    name: 'CI/CD Pipeline',
-    description: 'Jenkins-Docker-Kubernetes powered automation.',
-    github: 'https://github.com/pruthvi1405/cicd-pipeline',
-    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1050&q=80'
-  },
+  name: 'Study Sync',
+  description: 'Java-based microservices application for managing and delivering quizzes, with scalable architecture and real-time evaluation.',
+  github: 'https://github.com/pruthvi1405/study_sync',
+  image: study
+},
   {
-    name: 'ChatterMind',
-    description: 'AI chatbot that classifies and chats using NLP.',
-    github: 'https://github.com/pruthvi1405/chattermind',
-    image: 'https://images.unsplash.com/photo-1633114072402-44df68d26a04?auto=format&fit=crop&w=1050&q=80'
-  },
-  {
-    name: 'Attendance ML',
-    description: 'ML-powered face recognition attendance app.',
-    github: 'https://github.com/pruthvi1405/attendance-system',
-    image: 'https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?auto=format&fit=crop&w=1050&q=80'
-  }
+  name: 'ChessGame',
+  description: 'Real-time chess game built with React, featuring chat and video call integration.',
+  github: 'https://github.com/pruthvi1405/ChessGame',
+  image: chess
+},
+{
+  name: 'Medical Image Generator',
+  description: 'Diffusion-based deep learning model for generating realistic skin rash images for medical research.',
+  github: 'https://github.com/pruthvi1405/medical-image-generator',
+  image: medical
+}
+
 ]
 
 const currentIndex = ref(0)
