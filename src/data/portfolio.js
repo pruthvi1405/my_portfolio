@@ -109,18 +109,6 @@ export const experience = [
       'Future-proofed the PyEZ framework ahead of Python 2 end-of-life by migrating framework modules from Python 2 to Python 3, replacing deprecated syntax and APIs to keep the library running on supported interpreters.',
     ],
   },
-  {
-    company: 'Infinite Infolab',
-    location: 'India',
-    role: 'Software Engineer',
-    period: 'Jan 2021 — Jul 2022',
-    points: [
-      'Built and maintained secure REST APIs supporting 100+ daily active users using Node.js, Django, PostgreSQL, and MongoDB, with authentication, RBAC, and input validation.',
-      'Reduced API latency by 35% by identifying and fixing slow ORM queries and adding targeted database indexes.',
-      'Owned cloud deployment for multiple client applications on AWS EC2, S3, and Elastic Beanstalk, improving release reliability across projects.',
-      'Accelerated feature delivery by 25% by integrating Firebase for authentication and real-time sync, cutting custom backend development time.',
-    ],
-  },
 ]
 
 export const projects = [
