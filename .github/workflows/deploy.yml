@@ -1,21 +1,15 @@
-mkdir -p .github/workflows
-cat > .github/workflows/deploy.yml << 'EOF'
 name: Deploy to GitHub Pages
-
 on:
   push:
     branches: [main]
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
   group: pages
   cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,7 +23,6 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
-
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -39,8 +32,3 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
-EOF
-
-git add .github/workflows/deploy.yml
-git commit -m "Add GitHub Pages deploy workflow"
-git push
