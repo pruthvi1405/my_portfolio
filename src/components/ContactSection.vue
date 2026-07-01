@@ -1,62 +1,74 @@
+<script setup>
+import { profile } from '../data/portfolio'
+</script>
+
 <template>
-  <section id="contact" class="contact-section section">
-    <div class="contact-container">
-      <div class="left-light"></div>
-      <div class="right-light"></div>
-      <div class="contact-content">
-        <div class="contact-title">
-          <h2>Let's Connect</h2>
-          <p>Whether it's building something incredible or just talking code — I'm all ears.</p>
-        </div>
+  <section id="contact" class="contact">
+    <p class="contact__index">06. What's Next?</p>
+    <h2 class="contact__heading">Get In Touch</h2>
+    <p class="contact__text">
+      I'm always open to discussing new projects, automation ideas, or opportunities to build
+      something useful together. My inbox is open — drop me a line.
+    </p>
+    <a :href="`mailto:${profile.email}`" class="btn contact__cta">say hello</a>
 
-        <form class="contact-form" @submit.prevent="sendEmail">
-          <input v-model="form.name" type="text" placeholder="Your Name" required />
-          <input v-model="form.email" type="email" placeholder="Your Email" required />
-          <textarea v-model="form.message" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-
-        <div class="contact-footer">
-          <a class="resume-btn" href="/public/PruthviNiranjan_Resume.pdf" download>
-            Download My Resume
-          </a>
-          <div class="social-links">
-            <a href="mailto:pruthviniranjan14@gmail.com">Email</a>
-            <a href="https://www.linkedin.com/in/pruthvi-niranjan/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/pruthvi1405" target="_blank">GitHub</a>
-            <a href="https://leetcode.com/u/pruthviniranjan01/" target="_blank">LeetCode</a>
-          </div>
-        </div>
-      </div>
+    <div class="contact__links">
+      <a :href="`mailto:${profile.email}`" class="contact__link">{{ profile.email }}</a>
+      <a :href="`tel:+1${profile.phone.replace(/[^0-9]/g, '')}`" class="contact__link">{{ profile.phone }}</a>
+      <a :href="profile.github" target="_blank" rel="noopener" class="contact__link">GitHub</a>
+      <a :href="profile.linkedin" target="_blank" rel="noopener" class="contact__link">LinkedIn</a>
     </div>
   </section>
 </template>
-<script setup>
-import { ref } from 'vue'
-import emailjs from 'emailjs-com'
 
-const form = ref({ name: '', email: '', message: '' })
+<style scoped lang="scss">
+@use '../assets/styles/variables' as *;
+@use '../assets/styles/mixins' as *;
 
-const sendEmail = () => {
-  const serviceID = 'service_gkztwzk'
-  const templateID = 'template_w1r3k1o'
-  const userID = '1AgVE_v2Y28LGjEx6'
-
-  emailjs.send(serviceID, templateID, {
-    from_name: form.value.name,
-    reply_to: form.value.email,
-    message: form.value.message,
-  }, userID)
-    .then(() => {
-      alert('Message sent successfully!')
-      form.value = { name: '', email: '', message: '' }
-    })
-    .catch((err) => {
-      console.error('FAILED...', err)
-      alert('Something went wrong.')
-    })
+.contact {
+  @include container;
+  @include section-spacing;
+  text-align: center;
+  max-width: 640px;
 }
 
-</script>
+.contact__index {
+  font-family: $font-mono;
+  color: $accent;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
 
-<style scoped lang="scss" src="@/assets/styles/ContactSection.scss"></style>
+.contact__heading {
+  font-size: clamp(28px, 5vw, 44px);
+  color: $text-primary;
+  margin-bottom: 20px;
+}
+
+.contact__text {
+  margin-bottom: 36px;
+  font-size: 16px;
+}
+
+.contact__cta {
+  margin-bottom: 48px;
+}
+
+.contact__links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.contact__link {
+  font-family: $font-mono;
+  font-size: 14px;
+  color: $text-secondary;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $accent;
+  }
+}
+</style>

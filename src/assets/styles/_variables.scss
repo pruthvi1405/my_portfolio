@@ -1,0 +1,29 @@
+// Dark-mode "terminal" design tokens
+$bg-base: #0a0e14;
+$bg-elevated: #101622;
+$bg-card: #0d1320;
+$bg-card-hover: #121a2b;
+$border-color: #1e2735;
+$border-hover: #2a3648;
+
+$text-primary: #e6edf3;
+$text-secondary: #8b98a9;
+$text-muted: #5b6678;
+
+$accent: #64ffda;
+$accent-dim: #3fbfa0;
+$accent-secondary: #ff6ac1;
+$accent-glow: rgba(100, 255, 218, 0.15);
+
+$font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+$font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+$radius-sm: 6px;
+$radius-md: 10px;
+$radius-lg: 16px;
+
+$max-width: 1100px;
+
+$breakpoint-sm: 640px;
+$breakpoint-md: 860px;
+$breakpoint-lg: 1100px;

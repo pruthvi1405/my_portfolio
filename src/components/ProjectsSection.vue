@@ -1,88 +1,165 @@
+<script setup>
+import { projects, openSource } from '../data/portfolio'
+</script>
+
 <template>
-  <section class="projects-carousel section" id="projects">
-    <div class="carousel-wrapper">
-      <!-- LEFT: Carousel -->
-      <div class="carousel-left">
-        <div class="carousel-slides">
-          <div
-            v-for="(project, index) in projects"
-            :key="project.name"
-            class="carousel-slide"
-            :class="{
-              center: index === currentIndex,
-              left: index === (currentIndex - 1 + projects.length) % projects.length,
-              right: index === (currentIndex + 1) % projects.length
-            }"
-            @click="index === currentIndex && goToGithub(project.github)"
-          >
-            <img :src="project.image" :alt="project.name" class="slide-image" />
-            <div class="slide-details">
-              <h3>{{ project.name }}</h3>
-              <p>{{ project.description }}</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-controls">
-          <button @click="prevSlide">◀</button>
-          <button @click="nextSlide">▶</button>
-        </div>
-      </div>
-
-
+  <section id="projects" class="projects">
+    <div class="section-heading">
+      <span class="index">04.</span>
+      <h2>Projects</h2>
+      <span class="rule"></span>
     </div>
+
+    <div class="projects__grid">
+      <article v-for="project in projects" :key="project.name" class="project-card">
+        <div class="project-card__header">
+          <span class="project-card__folder">📁</span>
+          <span class="project-card__period">{{ project.period }}</span>
+        </div>
+        <h3>{{ project.name }}</h3>
+        <p class="project-card__subtitle">{{ project.subtitle }}</p>
+        <p class="project-card__desc">{{ project.description }}</p>
+        <div class="project-card__tags">
+          <span v-for="tag in project.tags" :key="tag" class="tag">{{ tag }}</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="section-heading section-heading--sub">
+      <span class="index">04a.</span>
+      <h2>Open Source</h2>
+      <span class="rule"></span>
+    </div>
+
+    <a :href="openSource.link" target="_blank" rel="noopener" class="opensource-card">
+      <div class="opensource-card__header">
+        <span class="opensource-card__icon">★</span>
+        <div>
+          <h3>{{ openSource.name }}</h3>
+          <p class="opensource-card__subtitle">{{ openSource.subtitle }}</p>
+        </div>
+        <span class="opensource-card__period">{{ openSource.period }}</span>
+      </div>
+      <p class="opensource-card__desc">{{ openSource.description }}</p>
+      <div class="project-card__tags">
+        <span v-for="tag in openSource.tags" :key="tag" class="tag">{{ tag }}</span>
+      </div>
+    </a>
   </section>
 </template>
 
-<script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
-import chess from '@/assets/images/chess.jpg'
-import study from '@/assets/images/study.jpg'
-import easy from '@/assets/images/easy.jpg'
-import medical from '@/assets/images/medical.jpg'
+<style scoped lang="scss">
+@use '../assets/styles/variables' as *;
+@use '../assets/styles/mixins' as *;
 
-const projects = [
-  {
-  name: 'Easy Connect',
-  description: 'Full-stack MERN application with real-time chat, video calling, and file sharing features.',
-  github: 'https://github.com/pruthvi1405/Easy-Connect',
-  image: easy
-},
-  {
-  name: 'Study Sync',
-  description: 'Java-based microservices application for managing and delivering quizzes, with scalable architecture and real-time evaluation.',
-  github: 'https://github.com/pruthvi1405/study_sync',
-  image: study
-},
-  {
-  name: 'ChessGame',
-  description: 'Real-time chess game built with React, featuring chat and video call integration.',
-  github: 'https://github.com/pruthvi1405/ChessGame',
-  image: chess
-},
-{
-  name: 'Medical Image Generator',
-  description: 'Diffusion-based deep learning model for generating realistic skin rash images for medical research.',
-  github: 'https://github.com/pruthvi1405/medical-image-generator',
-  image: medical
+.projects {
+  @include container;
+  @include section-spacing;
 }
 
-]
+.section-heading--sub {
+  margin-top: 64px;
+}
 
-const currentIndex = ref(0)
-let interval
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 
-const nextSlide = () => currentIndex.value = (currentIndex.value + 1) % projects.length
-const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + projects.length) % projects.length
-const goToGithub = (url) => window.open(url, '_blank')
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+}
 
-onMounted(() => {
-  interval = setInterval(nextSlide, 3000)
-})
+.project-card {
+  @include card;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
 
-onBeforeUnmount(() => {
-  clearInterval(interval)
-})
-</script>
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
 
-<style scoped lang="scss" src="@/assets/styles/ProjectSection.scss"></style>
+  &__folder {
+    font-size: 26px;
+  }
+
+  &__period {
+    font-family: $font-mono;
+    font-size: 12px;
+    color: $text-muted;
+  }
+
+  h3 {
+    font-size: 19px;
+    color: $text-primary;
+    margin-bottom: 4px;
+  }
+
+  &__subtitle {
+    font-family: $font-mono;
+    font-size: 13px;
+    color: $accent;
+    margin-bottom: 14px;
+  }
+
+  &__desc {
+    font-size: 14px;
+    margin-bottom: 20px;
+    flex: 1;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+.opensource-card {
+  @include card;
+  display: block;
+  padding: 28px;
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    h3 {
+      font-size: 19px;
+      color: $text-primary;
+    }
+  }
+
+  &__icon {
+    font-size: 22px;
+    color: $accent-secondary;
+  }
+
+  &__subtitle {
+    font-family: $font-mono;
+    font-size: 13px;
+    color: $accent;
+    margin-top: 4px;
+  }
+
+  &__period {
+    margin-left: auto;
+    font-family: $font-mono;
+    font-size: 12px;
+    color: $text-muted;
+    white-space: nowrap;
+  }
+
+  &__desc {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+</style>

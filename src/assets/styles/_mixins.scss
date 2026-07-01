@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+@mixin container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@mixin section-spacing {
+  padding: 120px 0;
+
+  @media (max-width: $breakpoint-md) {
+    padding: 80px 0;
+  }
+}
+
+@mixin card {
+  background: $bg-card;
+  border: 1px solid $border-color;
+  border-radius: $radius-md;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    border-color: $border-hover;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  }
+}
+
+@mixin mono-label {
+  font-family: $font-mono;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: $accent;
+}
