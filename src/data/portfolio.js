@@ -98,7 +98,7 @@ export const experience = [
   },
   {
     company: 'Juniper Networks',
-    location: 'USA',
+    location: 'India',
     role: 'Software Engineering Intern',
     period: 'Jan 2022 — Jun 2022',
     points: [
