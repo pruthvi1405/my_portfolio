@@ -99,26 +99,20 @@ export const certifications = [
 
 export const experience = [
   {
-    company: 'Abbott Laboratories',
+    company: 'Stemlink Automation',
 
-    location: 'Washington, USA',
+    location: 'Remote',
 
-    role: 'AI Software Engineer',
+    role: ' Software Engineer',
 
-    period: 'Sep 2024 — Present',
+    period: 'June 2024 — Present',
 
     points: [
-      'Designed cloud-native Java 17 and Spring Boot microservices processing real-time biosensor data from over 500K deployed glucose monitoring devices, sustaining more than 10,000 events per second with sub-second latency using Azure Service Bus.',
-
-      'Built production Retrieval-Augmented Generation (RAG) pipelines using Azure OpenAI, LangChain, Pinecone, and Redis to generate clinically relevant patient insights while improving AI response quality.',
-
-      'Developed agentic AI workflows using Azure OpenAI function-calling to query PostgreSQL and Cosmos DB, generate clinical summaries, and automate over 5,000 provider alerts daily with complete audit trails.',
-
-      'Built and maintained Kubernetes-based MLOps pipelines using Azure DevOps, Docker, and AKS, automating validation, deployment, and monitoring within FDA-compliant CI/CD environments.',
-
-      'Optimized Apache Kafka and Spark data pipelines to absorb a 30% increase in biosensor traffic with zero performance degradation while serving low-latency dashboards to more than 2,000 clinicians.',
-
-      'Implemented secure backend services with OAuth2/JWT authentication while adhering to FDA QSR, ISO 13485, and IEC 62304 compliance requirements.',
+      'Built event-driven data-ingestion pipelines (Python, FastAPI, AWS SQS, Snowflake) streaming 5M+ conversational events daily, collaborating with two senior engineers on architecture and code reviews.'
+      'Optimized pipeline throughput 6× through asynchronous processing, parallel execution, and partition tuning — reducing compute resource consumption and cloud spend per event processed.'
+      'Monitored pipeline jobs and resource utilization with real-time data-quality checks, schema validation, and anomaly detection — cutting data-integrity incidents 75% and identifying usage spikes before they escalated.'
+      'Developed RAG data pipelines with OpenAI embeddings, vector search, and Snowflake, improving retrieval accuracy 35% across 10,000+ knowledge documents.'
+      'Deployed containerized services with Docker and automated CI/CD (GitHub Actions, Jenkins), maintaining 99.9% deployment reliability and documenting runbooks and processes for the team.'
     ],
   },
 
