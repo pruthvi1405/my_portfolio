@@ -1,5 +1,3 @@
-
-
 export const profile = {
   name: 'Pruthvi Niranjan',
 
@@ -103,16 +101,16 @@ export const experience = [
 
     location: 'Remote',
 
-    role: ' Software Engineer',
+    role: 'Software Engineer',
 
     period: 'June 2024 — Present',
 
     points: [
-      'Built event-driven data-ingestion pipelines (Python, FastAPI, AWS SQS, Snowflake) streaming 5M+ conversational events daily, collaborating with two senior engineers on architecture and code reviews.'
-      'Optimized pipeline throughput 6× through asynchronous processing, parallel execution, and partition tuning — reducing compute resource consumption and cloud spend per event processed.'
-      'Monitored pipeline jobs and resource utilization with real-time data-quality checks, schema validation, and anomaly detection — cutting data-integrity incidents 75% and identifying usage spikes before they escalated.'
-      'Developed RAG data pipelines with OpenAI embeddings, vector search, and Snowflake, improving retrieval accuracy 35% across 10,000+ knowledge documents.'
-      'Deployed containerized services with Docker and automated CI/CD (GitHub Actions, Jenkins), maintaining 99.9% deployment reliability and documenting runbooks and processes for the team.'
+      'Built event-driven data-ingestion pipelines (Python, FastAPI, AWS SQS, Snowflake) streaming 5M+ conversational events daily, collaborating with two senior engineers on architecture and code reviews.',
+      'Optimized pipeline throughput 6× through asynchronous processing, parallel execution, and partition tuning — reducing compute resource consumption and cloud spend per event processed.',
+      'Monitored pipeline jobs and resource utilization with real-time data-quality checks, schema validation, and anomaly detection — cutting data-integrity incidents 75% and identifying usage spikes before they escalated.',
+      'Developed RAG data pipelines with OpenAI embeddings, vector search, and Snowflake, improving retrieval accuracy 35% across 10,000+ knowledge documents.',
+      'Deployed containerized services with Docker and automated CI/CD (GitHub Actions, Jenkins), maintaining 99.9% deployment reliability and documenting runbooks and processes for the team.',
     ],
   },
 
@@ -127,13 +125,9 @@ export const experience = [
 
     points: [
       'Developed scalable Spring Boot and Node.js microservices using OAuth2/JWT authentication, RBAC, PostgreSQL, and gRPC, reducing backend latency by 25%.',
-
       'Migrated legacy on-premise systems to AWS ECS (Fargate), Docker, Amazon S3, and RDS PostgreSQL with zero production downtime.',
-
       'Revamped legacy applications into React.js and Redux with GraphQL APIs, improving page load speed by 30% through code splitting and lazy loading.',
-
       'Integrated Apache Kafka for event-driven communication across distributed services and Stripe payment processing.',
-
       'Automated CI/CD pipelines using Jenkins and Docker, reducing deployment errors by 90% while achieving 85% automated test coverage with JUnit and Jest.',
     ],
   },
