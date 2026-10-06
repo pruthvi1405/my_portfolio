@@ -92,7 +92,7 @@ export const skills = [
   },
 ]
 
-export const certifications = []
+export const certifications = ['Certified Scrum Project Owner']
 
 export const experience = [
   {
