@@ -1,9 +1,10 @@
+```javascript
 export const profile = {
   name: 'Pruthvi Niranjan',
 
-  title: 'AI Software Engineer | GenAI, Distributed Systems & Cloud',
+  title: 'AI & Data Engineer | GenAI, Machine Learning & Cloud',
 
-  location: 'Washington, USA',
+  location: 'Hillsboro, OR',
 
   phone: '857-390-5565',
 
@@ -14,144 +15,142 @@ export const profile = {
   linkedin: 'https://linkedin.com/in/pruthvi-niranjan',
 
   summary:
-    'AI Software Engineer with 3+ years of experience designing scalable cloud-native microservices, distributed systems, and production-grade GenAI applications. Experienced in building Retrieval-Augmented Generation (RAG) pipelines, agentic AI workflows, high-throughput event-driven architectures, and Kubernetes-based cloud platforms using Java, Spring Boot, Python, Azure, and AWS. Passionate about engineering intelligent systems that combine modern LLM capabilities with enterprise-scale backend software.',
+    'AI & Data Engineer focused on building scalable data platforms, machine learning systems, and AI-powered applications. Experienced with Databricks, PySpark, MLflow, RAG, OpenAI, AWS, real-time data pipelines, and cloud infrastructure. Passionate about turning complex data into reliable production systems and intelligent applications.',
 
   roles: [
-    'Production GenAI Systems',
-    'Distributed Backend Engineering',
-    'Cloud-Native AI Infrastructure',
+    'AI & Machine Learning Engineering',
+    'Data Engineering & Analytics',
+    'GenAI & RAG Applications',
   ],
 }
 
 export const skills = [
   {
-    category: 'AI Engineering',
+    category: 'AI & Machine Learning',
     items: [
-      'Azure OpenAI',
-      'LangChain',
-      'Retrieval-Augmented Generation (RAG)',
-      'Agentic AI',
-      'Function Calling',
-      'Prompt Engineering',
-      'LLM Evaluation',
-      'Pinecone',
-      'Vector Databases',
-    ],
-  },
-
-  {
-    category: 'Backend',
-    items: [
-      'Java 17',
-      'Spring Boot',
-      'Spring Cloud',
       'Python',
-      'Node.js',
-      'REST APIs',
-      'gRPC',
-      'GraphQL',
+      'PySpark',
+      'OpenAI API',
+      'RAG',
+      'LangChain',
+      'MLflow',
+      'Embeddings',
+      'Vector Search',
     ],
   },
 
   {
-    category: 'Cloud & DevOps',
+    category: 'Data Engineering',
     items: [
-      'Azure',
-      'Azure OpenAI',
-      'AKS',
-      'Azure Service Bus',
-      'Azure DevOps',
+      'Databricks',
+      'LakeFlow',
+      'Auto Loader',
+      'SQL Server CDC',
+      'Amazon Kinesis',
+      'ETL',
+      'Medallion Architecture',
+      'Data Quality',
+    ],
+  },
+
+  {
+    category: 'Cloud & Infrastructure',
+    items: [
       'AWS',
+      'EC2',
+      'S3',
+      'RDS',
+      'DynamoDB',
+      'CloudWatch',
       'Docker',
       'Kubernetes',
-      'Jenkins',
-      'Git',
+      'Linux',
+      'Bash',
     ],
   },
 
   {
-    category: 'Data & Distributed Systems',
+    category: 'Databases',
     items: [
-      'Apache Kafka',
-      'Apache Spark',
       'PostgreSQL',
-      'Redis',
-      'Cosmos DB',
-      'Pinecone',
+      'MySQL',
+      'MongoDB',
+      'Snowflake',
+      'ChromaDB',
     ],
   },
 
   {
-    category: 'Frontend',
+    category: 'Analytics & Enterprise',
     items: [
-      'React',
-      'TypeScript',
-      'Redux',
+      'Power BI',
+      'Tableau',
+      'Excel',
+      'SAP',
+      'ServiceNow',
+      'Jira',
     ],
   },
 ]
 
-export const certifications = [
-  'AWS Certified Solutions Architect – Associate',
-]
+export const certifications = []
 
 export const experience = [
   {
-    company: 'Stemlink Automation',
+    company: 'Intel',
 
-    location: 'Remote',
+    location: 'Oregon',
 
-    role: 'Software Engineer',
+    role: 'Validation Engineer',
 
-    period: 'June 2024 — Present',
+    period: 'May 2025 — Aug 2026',
 
     points: [
-      'Built event-driven data-ingestion pipelines (Python, FastAPI, AWS SQS, Snowflake) streaming 5M+ conversational events daily, collaborating with two senior engineers on architecture and code reviews.',
-      'Optimized pipeline throughput 6× through asynchronous processing, parallel execution, and partition tuning — reducing compute resource consumption and cloud spend per event processed.',
-      'Monitored pipeline jobs and resource utilization with real-time data-quality checks, schema validation, and anomaly detection — cutting data-integrity incidents 75% and identifying usage spikes before they escalated.',
-      'Developed RAG data pipelines with OpenAI embeddings, vector search, and Snowflake, improving retrieval accuracy 35% across 10,000+ knowledge documents.',
-      'Deployed containerized services with Docker and automated CI/CD (GitHub Actions, Jenkins), maintaining 99.9% deployment reliability and documenting runbooks and processes for the team.',
+      'Managed $500K in pre-production hardware across global testing centers, coordinating inbound and outbound logistics across North America and Asia while maintaining 100% ServiceNow transaction accuracy.',
+      'Used SAP, ServiceNow, and Excel to manage inventory, reconcile material balances, track assets from receipt through disposal, and build dynamic operational dashboards.',
+      'Created Power BI predictive dashboards using historical consumption, build schedules, and testing timelines to forecast material demand, identify supply constraints, and improve project readiness.',
+      'Led a 5-person hardware decommissioning project, coordinating inventory reconciliation, asset disposition, documentation, and cross-functional handoffs with zero-discrepancy closeout.',
+      'Performed BIOS, BMC, and CPLD firmware flashing across 100+ server platforms, configured Linux/Windows test environments, and troubleshot hardware, firmware, and OS-level failures through log analysis.',
     ],
   },
 
   {
-    company: 'Infinite Infolab',
+    company: 'Juniper Networks',
 
-    location: 'Bengaluru, India',
+    location: 'India',
 
-    role: 'Software Engineer',
+    role: 'Software Engineering Intern',
 
     period: 'Jan 2021 — Jul 2022',
 
     points: [
-      'Developed scalable Spring Boot and Node.js microservices using OAuth2/JWT authentication, RBAC, PostgreSQL, and gRPC, reducing backend latency by 25%.',
-      'Migrated legacy on-premise systems to AWS ECS (Fargate), Docker, Amazon S3, and RDS PostgreSQL with zero production downtime.',
-      'Revamped legacy applications into React.js and Redux with GraphQL APIs, improving page load speed by 30% through code splitting and lazy loading.',
-      'Integrated Apache Kafka for event-driven communication across distributed services and Stripe payment processing.',
-      'Automated CI/CD pipelines using Jenkins and Docker, reducing deployment errors by 90% while achieving 85% automated test coverage with JUnit and Jest.',
+      'Designed Python and Juniper PyEZ automation to configure and monitor Junos-based infrastructure, improving scalability and streamlining network operations.',
+      'Developed NETCONF and YAML-based automation scripts with Pylint integration, reducing manual configuration errors by 60% and improving deployment efficiency.',
+      'Enhanced Linux and Bash monitoring tools to analyze network performance and troubleshoot failures, improving log parsing efficiency by 10%.',
+      'Implemented Git-based development workflows and CI pipelines for automated validation and testing while troubleshooting customer issues using Junos CLI and Wireshark.',
     ],
   },
 ]
 
 export const projects = [
   {
-    name: 'PulseCheck',
+    name: 'Insurance Analytics & ML Platform',
 
-    subtitle: 'Autonomous AI Code Review Platform',
+    subtitle: 'Real-Time Data Engineering & Machine Learning',
 
     period: 'Jul 2026',
 
     description:
-      'Built an autonomous GitHub App that authenticates webhooks, retrieves pull request diffs via GitHub APIs, performs dual-stage code reviews using static analysis and LLM reasoning, and publishes consolidated review feedback through an event-driven AWS architecture.',
+      'Built an end-to-end insurance analytics platform using Databricks LakeFlow, Auto Loader, SQL Server CDC, Kinesis, PySpark, MLflow, and Unity Catalog. Implemented real-time ingestion, Bronze-Silver-Gold architecture, automated data quality checks, claim severity modeling, and Databricks dashboards.',
 
     tags: [
-      'Python',
-      'FastAPI',
-      'OpenAI',
-      'GitHub API',
-      'AWS Lambda',
-      'API Gateway',
-      'SQS',
+      'Databricks',
+      'LakeFlow',
+      'PySpark',
+      'MLflow',
+      'Kinesis',
+      'CDC',
+      'Unity Catalog',
     ],
 
     link: '',
@@ -160,17 +159,16 @@ export const projects = [
   {
     name: 'DevLog AI',
 
-    subtitle: 'LLM-Powered Log Intelligence Platform',
+    subtitle: 'RAG-Based Engineering Log Analysis',
 
-    period: 'Oct 2025',
+    period: 'Aug 2025',
 
     description:
-      'Designed a Retrieval-Augmented Generation (RAG) platform using OpenAI embeddings, ChromaDB, semantic search, FastAPI, and Docker, enabling engineers to query logs in natural language and significantly reducing debugging time.',
+      'Built a RAG-powered log analysis platform using OpenAI, ChromaDB, FastAPI, and Docker, enabling engineers to query firmware and operating-system validation logs using natural language and reducing log-triage time by 2+ hours per day.',
 
     tags: [
       'Python',
       'OpenAI',
-      'LangChain',
       'RAG',
       'ChromaDB',
       'FastAPI',
@@ -186,10 +184,10 @@ export const openSource = {
 
   subtitle: 'Open-Source API Client · 79.8k★',
 
-  period: 'May 2026',
+  period: 'Jun 2026',
 
   description:
-    'Diagnosed and fixed a data-corruption bug where cURL imports silently truncated Basic Authentication passwords containing colons. Implemented a first-colon-only parsing fix, added regression tests, and successfully merged the contribution upstream.',
+    'Diagnosed and fixed a data-corruption bug where cURL imports silently truncated Basic Authentication passwords containing colons. Implemented a first-colon-only parsing fix and regression coverage, with the contribution merged upstream.',
 
   tags: [
     'TypeScript',
@@ -222,3 +220,4 @@ export const education = [
     period: 'Aug 2018 – May 2022',
   },
 ]
+```
