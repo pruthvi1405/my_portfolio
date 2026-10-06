@@ -1,4 +1,3 @@
-```javascript
 export const profile = {
   name: 'Pruthvi Niranjan',
 
@@ -98,35 +97,36 @@ export const certifications = []
 export const experience = [
   {
     company: 'Intel',
-
     location: 'Oregon',
-
     role: 'Validation Engineer',
-
     period: 'May 2025 — Aug 2026',
 
     points: [
       'Managed $500K in pre-production hardware across global testing centers, coordinating inbound and outbound logistics across North America and Asia while maintaining 100% ServiceNow transaction accuracy.',
+
       'Used SAP, ServiceNow, and Excel to manage inventory, reconcile material balances, track assets from receipt through disposal, and build dynamic operational dashboards.',
+
       'Created Power BI predictive dashboards using historical consumption, build schedules, and testing timelines to forecast material demand, identify supply constraints, and improve project readiness.',
+
       'Led a 5-person hardware decommissioning project, coordinating inventory reconciliation, asset disposition, documentation, and cross-functional handoffs with zero-discrepancy closeout.',
-      'Performed BIOS, BMC, and CPLD firmware flashing across 100+ server platforms, configured Linux/Windows test environments, and troubleshot hardware, firmware, and OS-level failures through log analysis.',
+
+      'Performed BIOS, BMC, and CPLD firmware flashing across 100+ server platforms, configured Linux/Windows test environments, and troubleshot hardware, firmware, and OS-level failures through log analysis and failure reproduction.',
     ],
   },
 
   {
     company: 'Juniper Networks',
-
-    location: 'India',
-
+    location: 'Bengaluru, India',
     role: 'Software Engineering Intern',
-
     period: 'Jan 2021 — Jul 2022',
 
     points: [
       'Designed Python and Juniper PyEZ automation to configure and monitor Junos-based infrastructure, improving scalability and streamlining network operations.',
+
       'Developed NETCONF and YAML-based automation scripts with Pylint integration, reducing manual configuration errors by 60% and improving deployment efficiency.',
-      'Enhanced Linux and Bash monitoring tools to analyze network performance and troubleshoot failures, improving log parsing efficiency by 10%.',
+
+      'Enhanced Linux and Bash monitoring tools to analyze network performance and troubleshoot failures, improving log parsing efficiency by 10% and reducing issue resolution time.',
+
       'Implemented Git-based development workflows and CI pipelines for automated validation and testing while troubleshooting customer issues using Junos CLI and Wireshark.',
     ],
   },
@@ -141,11 +141,12 @@ export const projects = [
     period: 'Jul 2026',
 
     description:
-      'Built an end-to-end insurance analytics platform using Databricks LakeFlow, Auto Loader, SQL Server CDC, Kinesis, PySpark, MLflow, and Unity Catalog. Implemented real-time ingestion, Bronze-Silver-Gold architecture, automated data quality checks, claim severity modeling, and Databricks dashboards.',
+      'Built an end-to-end insurance analytics platform using Databricks LakeFlow, Auto Loader, SQL Server CDC, Amazon Kinesis, PySpark, MLflow, and Unity Catalog. Implemented real-time ingestion, Bronze-Silver-Gold architecture, automated data quality checks, claim severity modeling, and Databricks dashboards and applications.',
 
     tags: [
       'Databricks',
       'LakeFlow',
+      'Auto Loader',
       'PySpark',
       'MLflow',
       'Kinesis',
@@ -187,7 +188,7 @@ export const openSource = {
   period: 'Jun 2026',
 
   description:
-    'Diagnosed and fixed a data-corruption bug where cURL imports silently truncated Basic Authentication passwords containing colons. Implemented a first-colon-only parsing fix and regression coverage, with the contribution merged upstream.',
+    'Diagnosed and fixed a data-corruption bug where cURL imports silently truncated Basic Authentication passwords containing colons. Implemented a first-colon-only parsing fix, added regression coverage, and successfully merged the contribution upstream.',
 
   tags: [
     'TypeScript',
@@ -220,4 +221,3 @@ export const education = [
     period: 'Aug 2018 – May 2022',
   },
 ]
-```
